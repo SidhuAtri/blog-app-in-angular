@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Blog } from '../blog';
+import { BlogsService } from '../blogs.service';
 
 @Component({
   selector: 'app-view-all-blogs',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewAllBlogsComponent implements OnInit {
 
-  constructor() { }
+  blogList: Blog;
+  constructor(private blogsService: BlogsService) { }
 
   ngOnInit(): void {
+    this.blogsService.getAllBlogs().subscribe(data => {
+      this.blogList = data;
+    });
   }
 
 }

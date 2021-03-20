@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Category } from 'src/app/site-framework/category';
+import { Blog } from '../blog';
+import { BlogsService } from '../blogs.service';
 
 @Component({
   selector: 'app-view-all-blogs-by-category',
@@ -8,13 +11,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ViewAllBlogsByCategoryComponent implements OnInit {
 
-  searchCategory = "";
-  constructor(private activatedRoute: ActivatedRoute) { }
+  searchCategory: Category;
+  blogList: Blog;
+  constructor(private activatedRoute: ActivatedRoute, private blogsService: BlogsService) { }
 
   ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe(data => {
-      this.searchCategory = data.category;
-    })
+    this.activatedRoute.params.subscribe(data => {
+      this.searchCategory = data.id;
+      
+      this.blogsService.searchCategoryBlogs(this.searchCategory).subscribe(data => {
+        this.blogList = data;
+      })
+    });
   }
 
 }

@@ -13,10 +13,10 @@ const routes: Routes = [
   { path: '', component: ViewAllBlogsComponent },
   { path: 'add-blog', component: AddBlogComponent },
   // { path: 'list-blogs', component: ViewAllBlogsComponent },
-  { path: 'search', component: ViewAllBlogsByCategoryComponent },
+  { path: 'category/:id', component: ViewAllBlogsByCategoryComponent },
   { path: 'search-date', component: ViewAllBlogsByDateComponent },
   { path: 'delete-blog/:id', component: DeleteBlogComponent },
-  { path: 'view-blog/:id', component: ViewBlogComponent },
+  { path: 'blog/:id', component: ViewBlogComponent },
   { path: 'update-blog/:id', component: UpdateBlogComponent }
 ];
 

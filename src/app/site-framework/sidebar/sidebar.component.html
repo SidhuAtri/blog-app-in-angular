@@ -1,6 +1,9 @@
-<h3 class="my-4">Explore Here...</h3>
-<div class="list-group">
-    <a href="#" class="list-group-item">Category 1</a>
-    <a href="#" class="list-group-item">Category 2</a>
-    <a href="#" class="list-group-item">Category 3</a>
+<h3 class="my-4 ">Blog Categories</h3>
+<a href="blogs" class="list-group-item">
+    View All Blogs
+</a>
+<div class="list-group" *ngFor="let cat of categoryList">
+    <a  href="blogs/category/{{cat.id}}" class="list-group-item" >
+        {{ cat.categoryName }}
+    </a>
 </div>
