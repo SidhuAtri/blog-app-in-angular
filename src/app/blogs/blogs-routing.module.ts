@@ -10,9 +10,9 @@ import { ViewBlogComponent } from './view-blog/view-blog.component';
 import { ViewAllBlogsComponent } from './view-all-blogs/view-all-blogs.component';
 
 const routes: Routes = [
-  { path: '', component: BlogsComponent },
+  { path: '', component: ViewAllBlogsComponent },
   { path: 'add-blog', component: AddBlogComponent },
-  { path: 'list-blogs', component: ViewAllBlogsComponent },
+  // { path: 'list-blogs', component: ViewAllBlogsComponent },
   { path: 'search', component: ViewAllBlogsByCategoryComponent },
   { path: 'search-date', component: ViewAllBlogsByDateComponent },
   { path: 'delete-blog/:id', component: DeleteBlogComponent },
