@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [HeaderComponent, SidebarComponent, FooterComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [HeaderComponent, SidebarComponent, FooterComponent]
 })
 export class SiteFrameworkModule { }
