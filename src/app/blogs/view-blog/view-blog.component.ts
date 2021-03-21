@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Blog } from '../blog';
 import { BlogsService } from '../blogs.service';
 
+
 @Component({
   selector: 'app-view-blog',
   templateUrl: './view-blog.component.html',

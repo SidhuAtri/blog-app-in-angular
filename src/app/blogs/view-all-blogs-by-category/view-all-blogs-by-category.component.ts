@@ -18,11 +18,11 @@ export class ViewAllBlogsByCategoryComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(data => {
       this.searchCategory = data.id;
-      
-      this.blogsService.searchCategoryBlogs(this.searchCategory).subscribe(data => {
-        this.blogList = data;
-      })
     });
+
+    this.blogsService.searchCategoryBlogs(this.searchCategory).subscribe(data => {
+      this.blogList = data;
+    })
   }
 
 }

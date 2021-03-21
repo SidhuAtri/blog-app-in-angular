@@ -1,5 +1,5 @@
 export interface Blog {
-    blogId: number;
+    id: number;
     categoryId: number;
     title: string;
     subTitle: string;

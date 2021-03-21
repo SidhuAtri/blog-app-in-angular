@@ -10,12 +10,13 @@ import { UpdateBlogComponent } from './update-blog/update-blog.component';
 import { DeleteBlogComponent } from './delete-blog/delete-blog.component';
 import { ViewAllBlogsByDateComponent } from './view-all-blogs-by-date/view-all-blogs-by-date.component';
 import { ViewAllBlogsByCategoryComponent } from './view-all-blogs-by-category/view-all-blogs-by-category.component';
-
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [BlogsComponent, AddBlogComponent, ViewBlogComponent, ViewAllBlogsComponent, UpdateBlogComponent, DeleteBlogComponent, ViewAllBlogsByDateComponent, ViewAllBlogsByCategoryComponent],
   imports: [
     CommonModule,
+    FormsModule,
     BlogsRoutingModule
   ]
 })

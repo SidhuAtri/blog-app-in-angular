@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SiteFrameworkModule } from './site-framework/site-framework.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SiteFrameworkModule } from './site-framework/site-framework.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SiteFrameworkModule
+    SiteFrameworkModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
